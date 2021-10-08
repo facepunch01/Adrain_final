@@ -1,6 +1,5 @@
 <script>
     import "./../styles/global.css"
-    import bugle from "$lib/assets/images/bugle.svg"
     let test = false;
     $: fixed = test ? 'on' : 'off';
     function swap (node) {
@@ -15,7 +14,7 @@
     <div>
         <nav>
             <div class="topbar">
-                <a class="websitename" href="#Bugle">The <span>bugle<img src="{bugle}" alt=""></span></a>
+                <a class="websitename" href="#Bugle">The <span>bugle<img src="bugle.svg" alt=""></span></a>
                 <ul>
                     <li><a href="#Contact">contact</a></li>
                     <li><a href="#Blog">blog</a></li>
