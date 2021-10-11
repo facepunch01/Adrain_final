@@ -28,7 +28,6 @@
     </section>
 </main>
 <style lang="scss">
-    $accsent-color: #5482FF;
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
     .section1 {
         display: grid;
