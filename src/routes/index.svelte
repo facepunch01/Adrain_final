@@ -2,18 +2,18 @@
     import People from "$lib/people.svelte";
     import Header from "$lib/header.svelte";
     import Hero from "$lib/hero.svelte";
+    import "./../styles/global.css"
 </script>
 <main>
     <Header></Header>
-    <section class="section1">
-        <div class="hero">
-            <div><Hero text={'Local comic\'s'}>
-                <div class="hero-content">
-                    <button onclick="#Go">Go</button>
-                </div>
-            </Hero>
+    <section>
+        <div class="section1">
+            <div class="section1-hero">
+                <Hero text="Your friendly neighboorhood bugle"></Hero>
             </div>
-            <img class="hero-image" src="hero-image.jpg" alt="">
+            <p class="hero-bottom-left">Tis is test</p>
+            <p class="hero-bottom-right">tis is test 2</p>
+            <img class="hero-img" src="hero-img.jpg" alt="">
         </div>
     </section>
     <section>
@@ -22,72 +22,62 @@
             <div class="team">
                 <div class="first-person"><People name="Jake Hackl" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum integer enim."></People></div>
                 <div class="second-person"><People name="Jake Hackl" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum integer enim."></People></div>
-                <div class="third-peron"><People name="Jake Hackl" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum integer enim."></People></div>            
+                <div class="third-person"><People name="Jake Hackl" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus ut faucibus pulvinar elementum integer enim."></People></div>            
             </div>
         </div>
     </section>
 </main>
 <style lang="scss">
-    $accsent-color: rgb(255, 243, 137);
+    $accsent-color: #5482FF;
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-    .hero {
-        background-color: black;
-        margin-top: 1.54rem;
-        place-self: center;
-        padding: 3rem;
-        padding-bottom: 2.9em;
+    .section1 {
         display: grid;
-        font-size: 9px;
-        grid-template-columns: repeat(1, 2fr);
-        grid-template-rows: repeat(1, 4fr);
-        color: black;
-        height: 50rem;
-        column-gap: 3rem;
-        text-transform: uppercase;
-        div {
-            margin-top: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "hero hero img"
+        "hero hero img"
+        "cta blog img"
+        ;
+        .hero-img {
+            width: 40rem;
+            grid-area: img;
         }
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            margin-top: -4rem;
-            font-size: 6rem;
-            color: rgb(22, 22, 22);
-            button {
-                justify-self: start;
-                align-self: center;
-                font-family: "Montserrat";
-                color: rgb(19, 19, 19);
-                font-size: 0.8em;
-                font-weight: 600;
-                border: none;
-                border-radius: 20px;
-                background-color: $accsent-color;
-                box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.125);
-                padding: 0.2rem;
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
-            }
+        .section1-hero {
+            color: #5482FF;
+            font-size: 0.3rem;
+            grid-area: hero;
+            text-align: center;
+            background: #FFD8A7;
+            place-self: center;
         }
-        img {
-            margin-top: -2rem;
-            width: 60rem;
-            justify-self: center;
-            align-self: center;
-            grid-column: 3 / 4;
-            grid-row: 1 / 2;
-            border-radius: 35px;
-            height: 40rem;
+        .hero-bottom-left {
+            background: #333;
+            text-align: center;
+            color: #05B1C1;
+            grid-area: cta;
+            margin-top: -0.1rem;
+            max-height: 14.7rem;
+            place-self: center;
+        }
+        .hero-bottom-right {
+            margin-top: -0.1rem;
+            text-align: center;
+            background: #05B1C1;
+            color: #333;
+            grid-area: blog;
+            max-height: 14.7rem;
+            place-self: center;
         }
     }
     .section2 {
         font-family: "Montserrat";
+        color: white;
         .section2-header {
-            color: rgba(0, 0, 0, 0.750);
+            color: #333;
             display: flex;
             font-size: 6.5rem;
             justify-content: center;
-            margin-bottom: -5rem;
         }
         .team {
             display: grid;

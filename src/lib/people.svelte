@@ -9,7 +9,7 @@
 </div>
 <style lang="scss">
     .main-container {
-        $accsent-color: rgb(255, 243, 137);
+        $accsent-color: #5482FF;
         display: grid;
         grid-auto-columns: 1fr;
         margin: 12rem;
@@ -17,7 +17,7 @@
         margin-right: 0;
         margin-bottom: 6rem;
         padding: 2rem;
-        border-radius: 2rem;
+        border-radius: 0.7rem;
         background-color: $accsent-color;
         font-size: 1.5rem;
         justify-content: center;

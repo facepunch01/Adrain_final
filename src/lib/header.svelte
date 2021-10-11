@@ -14,7 +14,7 @@
     <div>
         <nav>
             <div class="topbar">
-                <a class="websitename" href="#Bugle"><span class="logo-text">The <span class="highlighted">bugle</span><img class="logo" src="bugle.svg" alt=""></span></a>
+                <a class="websitename" href="#Bugle"><span class="logo-text">The <span class="highlighted">bugle</span></span></a>
                 <ul>
                     <li><a href="#Contact">contact</a></li>
                     <li><a href="#Blog">blog</a></li>
@@ -25,30 +25,28 @@
     </div>
 <style lang="scss">
     $accsent-color: rgb(255, 243, 137);
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
     .websitename:hover {
         text-decoration: none;
     }
     .topbar {
-        font-family: "Noto Sans Mono";
+        font-family: "Montserrat";
         display: flex;
         flex-direction: row;
         align-items: baseline;
         font-size: 1.5em;
-        padding-bottom: -1.1em;
         height: 2.2em;
-        color: white;
+        color: #333;
         padding-left: 1em;
         padding-right: 1em;
-        background-color: rgb(34, 34, 34);
+        background-color: #05B1C1;
         line-height: 0;
-        margin-bottom: -1em;
+        margin-bottom: 0em;
         a {
-            color: rgb(255, 255, 255);
+            color: #333;
             .highlighted {
                 font-weight: bold;
-                margin-left: -0.2em;
-                color: $accsent-color;
+                color: rgb(255, 58, 58, 0.82);
             }
         }
         ul {
@@ -65,9 +63,9 @@
     }
     .cta {
         color: #121212;
-        border-radius: 5px;
-        background-color: rgb(255, 241, 110);
-        border: solid rgb(255, 241, 110) 0.5em;
+        border-radius: 500rem;
+        background-color:rgb(255, 58, 58);
+        border: solid rgba(255, 58, 58, 0.82) 0.5em;
         padding-bottom: 0.3em;
         margin-top: -0.57em;
         a {
@@ -76,12 +74,5 @@
         a:hover {
             text-decoration: none;
         }
-    }
-    .logo {
-        width: 1.5em;
-        margin-bottom: -0.45em;
-        margin-left: 0.2em;
-        transform: rotate(345deg);
-        filter: invert(93%) sepia(94%) saturate(23%) hue-rotate(65deg) brightness(107%) contrast(106%);
     }
 </style>

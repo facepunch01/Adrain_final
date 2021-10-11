@@ -10,6 +10,9 @@
     .text {
         font-size: 15em;
         font-family: "Montserrat";
-        color: white;
+        padding-left: 15rem;
+        padding-right: 15rem;
+        margin-top: 11.7rem;
+        margin-bottom: 11.9rem;
     }
 </style>
