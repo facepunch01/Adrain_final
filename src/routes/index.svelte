@@ -1,5 +1,5 @@
 <script>
-    import Header from "$lib/Header.svelte";
+    import Header from "..lib/Header.svelte";
     import Hero from "$lib/mainpage/Hero.svelte";
 </script>
 <div class="sticky top-0 z-50"><Header></Header></div>
