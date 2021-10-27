@@ -24,7 +24,7 @@
                 <ul class="flex flex-row items-center text-[#333] gap-3">
                     <li class="">Contact</li>
                     <li class="">Blog</li>
-                    <li class="bg-[#FF6E6E] border-l-10 border-[#FF6E6E] rounded-full border-r-10"><a href="#Map">Go</a></li>
+                    <li class="bg-[#FF6E6E] place-self-center text-lg border btn btn-primary btn-xs hover:bg-[#8f3b3b] hover:border-[#8f3b3b] border-l-3 border-[#FF6E6E] rounded-full border-r-3 h-[1.9rem]"><a href="#Map" class="">Go</a></li>
                 </ul>
             </div>
         </div>
