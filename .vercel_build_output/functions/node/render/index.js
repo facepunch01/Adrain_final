@@ -6071,6 +6071,11 @@ function create_ssr_component(fn) {
     $$render
   };
 }
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean && !value)
+    return "";
+  return ` ${name}${value === true ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
+}
 function afterUpdate() {
 }
 var css$4 = {
@@ -6133,9 +6138,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-63e5ab49.js",
+      file: assets + "/_app/start-943ae6bd.js",
       css: [assets + "/_app/assets/start-1f089c51.css"],
-      js: [assets + "/_app/start-63e5ab49.js", assets + "/_app/chunks/vendor-129da4eb.js"]
+      js: [assets + "/_app/start-943ae6bd.js", assets + "/_app/chunks/vendor-129da4eb.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6194,7 +6199,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-bac600b2.js", "css": ["assets/pages/__layout.svelte-e384d431.css"], "js": ["pages/__layout.svelte-bac600b2.js", "chunks/vendor-129da4eb.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-c60faab7.js", "css": [], "js": ["error.svelte-c60faab7.js", "chunks/vendor-129da4eb.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-66ef71fe.js", "css": ["assets/pages/index.svelte-33cd45ff.css"], "js": ["pages/index.svelte-66ef71fe.js", "chunks/vendor-129da4eb.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-bac600b2.js", "css": ["assets/pages/__layout.svelte-e384d431.css"], "js": ["pages/__layout.svelte-bac600b2.js", "chunks/vendor-129da4eb.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-c60faab7.js", "css": [], "js": ["error.svelte-c60faab7.js", "chunks/vendor-129da4eb.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-98875e4d.js", "css": ["assets/pages/index.svelte-aede6b53.css"], "js": ["pages/index.svelte-98875e4d.js", "chunks/vendor-129da4eb.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6259,7 +6264,7 @@ var Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             <div class="${"self-center svelte-1qrx4rw"}"><svg class="${"md:hidden svelte-1qrx4rw"}" viewBox="${"0 0 100 80"}" width="${"25"}" height="${"25"}"><rect width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"30"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"60"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect></svg></div>
             <div class="${"<md:hidden flex flex-row items-center text-lg svelte-1qrx4rw"}"><ul class="${"flex flex-row items-center text-[#333] gap-3 svelte-1qrx4rw"}"><li class="${""}">Contact</li>
                     <li class="${""}">Blog</li>
-                    <li class="${"bg-[#FF6E6E] border-l-10 border-[#FF6E6E] rounded-full border-r-10 svelte-1qrx4rw"}"><a href="${"#Map"}">Go</a></li></ul></div></div>
+                    <li class="${"bg-[#FF6E6E] border-l-10 border-[#FF6E6E] rounded-full border-r-10 btn svelte-1qrx4rw"}"><a href="${"#Map"}">Go</a></li></ul></div></div>
         <div class="${[
     "float-right drop-shadow-2xl text-center drop-down h-full absolute z-[100] right-0 opacity-100 svelte-1qrx4rw",
     "drop-down-closed "
@@ -6269,15 +6274,16 @@ var Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </main>`;
 });
 var css$1 = {
-  code: ".grid-item.svelte-89pp9g{padding-top:3.5rem;padding-bottom:3.5rem}.bg-\\[\\#FFD8A7\\].svelte-89pp9g{--tw-bg-opacity:1;background-color:rgba(255, 216, 167, var(--tw-bg-opacity))}.bg-\\[\\#333\\].svelte-89pp9g{--tw-bg-opacity:1;background-color:rgba(51, 51, 51, var(--tw-bg-opacity))}.bg-\\[\\#05B1C1\\].svelte-89pp9g{--tw-bg-opacity:1;background-color:rgba(5, 177, 193, var(--tw-bg-opacity))}.grid.svelte-89pp9g{display:-ms-grid;display:grid}.hidden.svelte-89pp9g{display:none}.font-bold.svelte-89pp9g{font-weight:700}.h-44.svelte-89pp9g{height:11rem}.h-\\[30rem\\].svelte-89pp9g{height:30rem}.h-\\[86\\.7\\%\\].svelte-89pp9g{height:86.7%}.text-4xl.svelte-89pp9g{font-size:2.25rem;line-height:2.5rem}.object-cover.svelte-89pp9g{-o-object-fit:cover;object-fit:cover}.px-14.svelte-89pp9g{padding-left:3.5rem;padding-right:3.5rem}.text-center.svelte-89pp9g{text-align:center}.text-\\[\\#0563C1\\].svelte-89pp9g{--tw-text-opacity:1;color:rgba(5, 99, 193, var(--tw-text-opacity))}.text-\\[\\#05B1C1\\].svelte-89pp9g{--tw-text-opacity:1;color:rgba(5, 177, 193, var(--tw-text-opacity))}.text-\\[\\#333\\].svelte-89pp9g{--tw-text-opacity:1;color:rgba(51, 51, 51, var(--tw-text-opacity))}.uppercase.svelte-89pp9g{text-transform:uppercase}.w-\\[100\\%\\].svelte-89pp9g{width:100%}.grid-cols-2.svelte-89pp9g{grid-template-columns:repeat(2, minmax(0, 1fr))}.col-start-1.svelte-89pp9g{grid-column-start:1}.col-start-2.svelte-89pp9g{grid-column-start:2}.col-start-3.svelte-89pp9g{grid-column-start:3}.col-end-3.svelte-89pp9g{grid-column-end:3}.col-end-2.svelte-89pp9g{grid-column-end:2}.col-end-4.svelte-89pp9g{grid-column-end:4}.grid-rows-2.svelte-89pp9g{grid-template-rows:repeat(2, minmax(0, 1fr))}.row-start-2.svelte-89pp9g{grid-row-start:2}.row-start-1.svelte-89pp9g{grid-row-start:1}.row-end-3.svelte-89pp9g{grid-row-end:3}@media(min-width: 640px){.sm\\:block.svelte-89pp9g{display:block}.sm\\:grid-cols-3.svelte-89pp9g{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media(min-width: 768px){.md\\:h-2xl.svelte-89pp9g{height:42rem}.md\\:h-\\[81\\%\\].svelte-89pp9g{height:81%}.md\\:h-\\[90\\.5\\%\\].svelte-89pp9g{height:90.5%}.md\\:text-6xl.svelte-89pp9g{font-size:3.75rem;line-height:1}}@media(min-width: 1024px){.lg\\:text-7xl.svelte-89pp9g{font-size:4.5rem;line-height:1}}",
+  code: ".grid-item.svelte-168mg1v{padding-top:3.5rem;padding-bottom:3.5rem}.bg-\\[\\#FFD8A7\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(255, 216, 167, var(--tw-bg-opacity))}.bg-\\[\\#333\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(51, 51, 51, var(--tw-bg-opacity))}.bg-\\[\\#05B1C1\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(5, 177, 193, var(--tw-bg-opacity))}.grid.svelte-168mg1v{display:-ms-grid;display:grid}.hidden.svelte-168mg1v{display:none}.font-bold.svelte-168mg1v{font-weight:700}.h-44.svelte-168mg1v{height:11rem}.h-\\[30rem\\].svelte-168mg1v{height:30rem}.h-\\[86\\.7\\%\\].svelte-168mg1v{height:86.7%}.text-4xl.svelte-168mg1v{font-size:2.25rem;line-height:2.5rem}.-ml-5\\.5.svelte-168mg1v{margin-left:-1.375rem}.object-cover.svelte-168mg1v{-o-object-fit:cover;object-fit:cover}.px-14.svelte-168mg1v{padding-left:3.5rem;padding-right:3.5rem}.text-center.svelte-168mg1v{text-align:center}.text-\\[\\#0563C1\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(5, 99, 193, var(--tw-text-opacity))}.text-\\[\\#05B1C1\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(5, 177, 193, var(--tw-text-opacity))}.text-\\[\\#333\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(51, 51, 51, var(--tw-text-opacity))}.uppercase.svelte-168mg1v{text-transform:uppercase}.w-\\[100\\%\\].svelte-168mg1v{width:100%}.grid-cols-2.svelte-168mg1v{grid-template-columns:repeat(2, minmax(0, 1fr))}.col-start-1.svelte-168mg1v{grid-column-start:1}.col-start-2.svelte-168mg1v{grid-column-start:2}.col-start-3.svelte-168mg1v{grid-column-start:3}.col-end-3.svelte-168mg1v{grid-column-end:3}.col-end-2.svelte-168mg1v{grid-column-end:2}.col-end-4.svelte-168mg1v{grid-column-end:4}.grid-rows-2.svelte-168mg1v{grid-template-rows:repeat(2, minmax(0, 1fr))}.row-start-2.svelte-168mg1v{grid-row-start:2}.row-start-1.svelte-168mg1v{grid-row-start:1}.row-end-3.svelte-168mg1v{grid-row-end:3}@media(min-width: 640px){.sm\\:block.svelte-168mg1v{display:block}.sm\\:grid-cols-3.svelte-168mg1v{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media(min-width: 768px){.md\\:h-2xl.svelte-168mg1v{height:42rem}.md\\:h-\\[81\\%\\].svelte-168mg1v{height:81%}.md\\:h-\\[90\\.5\\%\\].svelte-168mg1v{height:90.5%}.md\\:text-6xl.svelte-168mg1v{font-size:3.75rem;line-height:1}}@media(min-width: 1024px){.lg\\:text-7xl.svelte-168mg1v{font-size:4.5rem;line-height:1}}",
   map: null
 };
+var img = "hero-img.jpg";
 var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<section class="${"font-main-font text-center svelte-89pp9g"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem] svelte-89pp9g"}"><h1 class="${"center-grid col-start-1 text-4xl px-14 bg-[#FFD8A7] md:text-6xl lg:text-7xl text-[#0563C1] col-end-3 grid-item svelte-89pp9g"}">Your Friendly neighborhood Bugle</h1>
-        <p class="${"center-grid text-[#05B1C1] text-4xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 grid-item uppercase svelte-89pp9g"}"><a href="${"#Blog"}">blog</a></p>
-        <p class="${"center-grid text-[#333] text-4xl bg-[#05B1C1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 grid-item uppercase svelte-89pp9g"}"><a href="${"#Go"}">go</a></p>
-        <img src="${"Hero-img.jpg"}" class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3 svelte-89pp9g"}" alt="${""}"></div>
+  return `<section class="${"font-main-font text-center svelte-168mg1v"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem] svelte-168mg1v"}"><h1 class="${"center-grid col-start-1 text-4xl px-14 bg-[#FFD8A7] md:text-6xl lg:text-7xl text-[#0563C1] col-end-3 grid-item svelte-168mg1v"}">Your Friendly neighborhood Bugle</h1>
+        <p href="${""}" class="${"center-grid -ml-5.5 text-[#05B1C1] text-4xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 grid-item uppercase svelte-168mg1v"}"><a href="${"#Blog"}" class="${"btn"}">blog</a></p>
+        <p class="${"center-grid text-[#333] text-4xl bg-[#05B1C1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 grid-item uppercase svelte-168mg1v"}"><a href="${"#Go"}" class="${"btn"}">go</a></p>
+        <img${add_attribute("src", img, 0)} class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3 svelte-168mg1v"}" alt="${""}"></div>
 </section>`;
 });
 var css = {
@@ -6290,7 +6296,8 @@ var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 ${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 <section class="${"-mt-16"}"><div class="${"font-main-font bg-[#0563C1] text-[#fff0dd] py-14 -ml-1 sm:py-32 <sm:flex <sm:flex-col <sm:justify-center <sm:items-center sm:px-16 font-main-font text-[1.3rem]"}"><ul class="${"sm:list-disc sm:mt-5"}"><li class="${""}">Fact 1</li>
             <li class="${""}">Fact 2</li>
-            <li class="${""}">Fact 3</li></ul></div>
+            <li class="${""}">Fact 3</li></ul></div></section>
+<section><button class="${"btn btn-outline"}">neutral</button>
 </section>`;
 });
 var index = /* @__PURE__ */ Object.freeze({

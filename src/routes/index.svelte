@@ -13,6 +13,7 @@
         </ul>
     </div>
 </section>
+
 <style global windi:global>
     @layer utilities {
         .drop-down-closed {
@@ -20,7 +21,7 @@
         },
         .drop-down-open {
             @apply opacity-100 visible;
-        },
+           },
         .font-main-font {
             font-family: 'Montserrat';
         },

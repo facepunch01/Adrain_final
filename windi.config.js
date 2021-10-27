@@ -1,4 +1,5 @@
 import { defineConfig } from 'windicss/helpers'
+const { transform } = require('windicss/helpers')
 
 export default defineConfig({
     theme: {
@@ -14,5 +15,8 @@ export default defineConfig({
                 "sans": "Montserrat",
             }
         }
-    }
+    },
+    plugins: [
+        transform('daisyui'),
+    ],
 })
