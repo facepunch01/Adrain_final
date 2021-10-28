@@ -6078,8 +6078,8 @@ function add_attribute(name, value, boolean) {
 }
 function afterUpdate() {
 }
-var css$4 = {
-  code: "#svelte-announcer.svelte-1r92h5h{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
+var css = {
+  code: "#svelte-announcer.svelte-u7bl1d{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
   map: null
 };
 var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6103,11 +6103,14 @@ var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.props_1(props_1);
   if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
     $$bindings.props_2(props_2);
-  $$result.css.add(css$4);
+  $$result.css.add(css);
   {
     stores.page.set(page);
   }
-  return `${validate_component(components[0] || missing_component, "svelte:component").$$render($$result, Object.assign(props_0 || {}), {}, {
+  return `
+
+
+${validate_component(components[0] || missing_component, "svelte:component").$$render($$result, Object.assign(props_0 || {}), {}, {
     default: () => `${components[1] ? `${validate_component(components[1] || missing_component, "svelte:component").$$render($$result, Object.assign(props_1 || {}), {}, {
       default: () => `${components[2] ? `${validate_component(components[2] || missing_component, "svelte:component").$$render($$result, Object.assign(props_2 || {}), {}, {})}` : ``}`
     })}` : ``}`
@@ -6127,7 +6130,7 @@ var user_hooks = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module"
 });
-var template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<link rel="preconnect" href="https://fonts.googleapis.com"> \n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> \n		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body }) => '<!DOCTYPE html>\n<html data-theme="light" lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<link rel="preconnect" href="https://fonts.googleapis.com"> \n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> \n		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
 var options = null;
 var default_settings = { paths: { "base": "", "assets": "" } };
 function init(settings = default_settings) {
@@ -6138,9 +6141,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-943ae6bd.js",
-      css: [assets + "/_app/assets/start-1f089c51.css"],
-      js: [assets + "/_app/start-943ae6bd.js", assets + "/_app/chunks/vendor-129da4eb.js"]
+      file: assets + "/_app/start-c56783f4.js",
+      css: [assets + "/_app/assets/start-808c0b29.css"],
+      js: [assets + "/_app/start-c56783f4.js", assets + "/_app/chunks/vendor-129da4eb.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6179,6 +6182,14 @@ var manifest = {
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
       b: [".svelte-kit/build/components/error.svelte"]
+    },
+    {
+      type: "endpoint",
+      pattern: /^\/main\/?$/,
+      params: empty,
+      load: () => Promise.resolve().then(function() {
+        return main$1;
+      })
     }
   ]
 };
@@ -6199,7 +6210,7 @@ var module_lookup = {
     return index;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-bac600b2.js", "css": ["assets/pages/__layout.svelte-e384d431.css"], "js": ["pages/__layout.svelte-bac600b2.js", "chunks/vendor-129da4eb.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-c60faab7.js", "css": [], "js": ["error.svelte-c60faab7.js", "chunks/vendor-129da4eb.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-98875e4d.js", "css": ["assets/pages/index.svelte-aede6b53.css"], "js": ["pages/index.svelte-98875e4d.js", "chunks/vendor-129da4eb.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-c4731387.js", "css": ["assets/pages/__layout.svelte-312ec9e8.css"], "js": ["pages/__layout.svelte-c4731387.js", "chunks/vendor-129da4eb.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-c60faab7.js", "css": [], "js": ["error.svelte-c60faab7.js", "chunks/vendor-129da4eb.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-c5e9ebc7.js", "css": [], "js": ["pages/index.svelte-c5e9ebc7.js", "chunks/vendor-129da4eb.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -6216,12 +6227,13 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender });
 }
-var css$3 = {
-  code: `*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}:-moz-focusring{outline:1px dotted ButtonText}:-moz-ui-invalid{box-shadow:none}::moz-focus-inner{border-style:none;padding:0}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type='search']{-webkit-appearance:textfield;outline-offset:-2px}abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted}body{margin:0;font-family:inherit;line-height:inherit}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;padding:0;line-height:inherit;color:inherit}button,select{text-transform:none}button,[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}button{background-color:transparent;background-image:none}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,[role="button"]{cursor:pointer}code,kbd,samp,pre{font-size:1em}fieldset{margin:0;padding:0}hr{height:0;color:inherit;border-top-width:1px}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}img{border-style:solid}input::placeholder{opacity:1;color:#9ca3af}input::webkit-input-placeholder{opacity:1;color:#9ca3af}input::-moz-placeholder{opacity:1;color:#9ca3af}input:-ms-input-placeholder{opacity:1;color:#9ca3af}input::-ms-input-placeholder{opacity:1;color:#9ca3af}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}legend{padding:0}ol,ul{list-style:none;margin:0;padding:0}progress{vertical-align:baseline}pre,code,kbd,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}summary{display:list-item}table{text-indent:0;border-color:inherit;border-collapse:collapse}textarea{resize:vertical}textarea::placeholder{opacity:1;color:#9ca3af}textarea::webkit-input-placeholder{opacity:1;color:#9ca3af}textarea::-moz-placeholder{opacity:1;color:#9ca3af}textarea:-ms-input-placeholder{opacity:1;color:#9ca3af}textarea::-ms-input-placeholder{opacity:1;color:#9ca3af}`,
-  map: null
-};
+var main = "";
+var main$1 = /* @__PURE__ */ Object.freeze({
+  __proto__: null,
+  [Symbol.toStringTag]: "Module",
+  "default": main
+});
 var _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$3);
   return `${slots.default ? slots.default({}) : ``}`;
 });
 var __layout = /* @__PURE__ */ Object.freeze({
@@ -6254,51 +6266,32 @@ var error = /* @__PURE__ */ Object.freeze({
   "default": Error$1,
   load
 });
-var css$2 = {
-  code: ".bg-\\[\\#05B1C1\\].svelte-1qrx4rw{--tw-bg-opacity:1;background-color:rgba(5, 177, 193, var(--tw-bg-opacity))}.bg-\\[\\#FF6E6E\\].svelte-1qrx4rw{--tw-bg-opacity:1;background-color:rgba(255, 110, 110, var(--tw-bg-opacity))}.border-\\[\\#FF6E6E\\].svelte-1qrx4rw{--tw-border-opacity:1;border-color:rgba(255, 110, 110, var(--tw-border-opacity))}.rounded-full.svelte-1qrx4rw{border-radius:9999px}.rounded-md.svelte-1qrx4rw{border-radius:0.375rem}.border-8.svelte-1qrx4rw{border-width:8px}.border-l-10.svelte-1qrx4rw{border-left-width:10px}.border-r-10.svelte-1qrx4rw{border-right-width:10px}.flex.svelte-1qrx4rw{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.flex-row.svelte-1qrx4rw{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.items-center.svelte-1qrx4rw{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.self-center.svelte-1qrx4rw{-ms-flex-item-align:center;-ms-grid-row-align:center;-webkit-align-self:center;align-self:center}.float-right.svelte-1qrx4rw{float:right}.font-bold.svelte-1qrx4rw{font-weight:700}.h-full.svelte-1qrx4rw{height:100%}.text-2xl.svelte-1qrx4rw{font-size:1.5rem;line-height:2rem}.text-lg.svelte-1qrx4rw{font-size:1.125rem;line-height:1.75rem}.text-4xl.svelte-1qrx4rw{font-size:2.25rem;line-height:2.5rem}.mr-auto.svelte-1qrx4rw{margin-right:auto}.-ml-0\\.5.svelte-1qrx4rw{margin-left:-0.125rem}.mr-1.svelte-1qrx4rw{margin-right:0.25rem}.mt-1.svelte-1qrx4rw{margin-top:0.25rem}.mb-5.svelte-1qrx4rw{margin-bottom:1.25rem}.mt-0\\.5.svelte-1qrx4rw{margin-top:0.125rem}.mb-0\\.5.svelte-1qrx4rw{margin-bottom:0.125rem}.opacity-100.svelte-1qrx4rw{opacity:1}.px-3.svelte-1qrx4rw{padding-left:0.75rem;padding-right:0.75rem}.py-2.svelte-1qrx4rw{padding-top:0.5rem;padding-bottom:0.5rem}.absolute.svelte-1qrx4rw{position:absolute}.relative.svelte-1qrx4rw{position:relative}.right-0.svelte-1qrx4rw{right:0px}.fill-\\[\\#0BEAFF\\].svelte-1qrx4rw{--tw-fill-opacity:1;fill:rgba(11, 234, 255, var(--tw-fill-opacity))}.text-center.svelte-1qrx4rw{text-align:center}.text-\\[\\#333\\].svelte-1qrx4rw{--tw-text-opacity:1;color:rgba(51, 51, 51, var(--tw-text-opacity))}.text-\\[\\#0BEAFF\\].svelte-1qrx4rw{--tw-text-opacity:1;color:rgba(11, 234, 255, var(--tw-text-opacity))}.text-\\[\\#F2F2F2\\].svelte-1qrx4rw{--tw-text-opacity:1;color:rgba(242, 242, 242, var(--tw-text-opacity))}.gap-3.svelte-1qrx4rw{grid-gap:0.75rem;gap:0.75rem}.drop-shadow-2xl.svelte-1qrx4rw{--tw-drop-shadow:drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15))}@media(min-width: 768px){.md\\:hidden.svelte-1qrx4rw{display:none}.md\\:text-xl.svelte-1qrx4rw{font-size:1.25rem;line-height:1.75rem}}@media(max-width: 767.9px){.\\<md\\:hidden.svelte-1qrx4rw{display:none}}",
-  map: null
-};
 var Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$2);
-  return `<main><nav class="${"relative font-main-font svelte-1qrx4rw"}"><div class="${"flex flex-row bg-[#05B1C1] text-[#333] fill-[#0BEAFF] px-3 py-2 svelte-1qrx4rw"}"><h1 class="${"mr-auto self-center -ml-0.5 text-2xl md:text-xl svelte-1qrx4rw"}">The <span class="${"text-[#0BEAFF] font-bold svelte-1qrx4rw"}">Bugle</span></h1>
-            <div class="${"self-center svelte-1qrx4rw"}"><svg class="${"md:hidden svelte-1qrx4rw"}" viewBox="${"0 0 100 80"}" width="${"25"}" height="${"25"}"><rect width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"30"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"60"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect></svg></div>
-            <div class="${"<md:hidden flex flex-row items-center text-lg svelte-1qrx4rw"}"><ul class="${"flex flex-row items-center text-[#333] gap-3 svelte-1qrx4rw"}"><li class="${""}">Contact</li>
+  return `<main><nav class="${"relative font-main-font"}"><div class="${"flex flex-row bg-[#05B1C1] text-[#333] fill-[#0BEAFF] px-3 py-2"}"><h1 class="${"mr-auto self-center -ml-0.5 text-2xl md:text-xl"}">The <span class="${"text-[#0BEAFF] font-bold"}">Bugle</span></h1>
+            <div class="${"self-center"}"><svg class="${"md:hidden"}" viewBox="${"0 0 100 80"}" width="${"25"}" height="${"25"}"><rect width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"30"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"60"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect></svg></div>
+            <div class="${"<md:hidden flex flex-row items-center text-lg"}"><ul class="${"flex flex-row items-center text-[#333] gap-3"}"><li class="${""}">Contact</li>
                     <li class="${""}">Blog</li>
-                    <li class="${"bg-[#FF6E6E] border-l-10 border-[#FF6E6E] rounded-full border-r-10 btn svelte-1qrx4rw"}"><a href="${"#Map"}">Go</a></li></ul></div></div>
+                    <li class="${"bg-[#FF6E6E] place-self-center text-lg border btn btn-primary btn-xs hover:bg-[#8f3b3b] hover:border-[#8f3b3b] border-l-3 border-[#FF6E6E] rounded-full border-r-3 h-[1.9rem]"}"><a href="${"#Map"}" class="${""}">Go</a></li></ul></div></div>
         <div class="${[
-    "float-right drop-shadow-2xl text-center drop-down h-full absolute z-[100] right-0 opacity-100 svelte-1qrx4rw",
+    "float-right drop-shadow-2xl text-center drop-down h-full absolute z-[100] right-0 opacity-100",
     "drop-down-closed "
-  ].join(" ").trim()}"><ul class="${"mr-1 mt-1 bg-[#FF6E6E] text-[#F2F2F2] border-8 rounded-md border-[#FF6E6E] text-4xl font-main-font font-bold svelte-1qrx4rw"}"><li class="${"mb-5 mt-0.5 svelte-1qrx4rw"}">Contact</li>
-                <li class="${"mb-5 svelte-1qrx4rw"}">Blog</li>
-                <li class="${"mb-0.5 svelte-1qrx4rw"}"><a href="${"#Map"}">Go</a></li></ul></div></nav>
-</main>`;
+  ].join(" ").trim()}"><ul class="${"mr-1 mt-1 bg-[#FF6E6E] text-[#F2F2F2] border-8 rounded-md border-[#FF6E6E] text-4xl font-main-font font-bold"}"><li class="${"mb-5 mt-0.5"}">Contact</li>
+                <li class="${"mb-5"}">Blog</li>
+                <li class="${"mb-0.5"}"><a href="${"#Map"}">Go</a></li></ul></div></nav></main>`;
 });
-var css$1 = {
-  code: ".grid-item.svelte-168mg1v{padding-top:3.5rem;padding-bottom:3.5rem}.bg-\\[\\#FFD8A7\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(255, 216, 167, var(--tw-bg-opacity))}.bg-\\[\\#333\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(51, 51, 51, var(--tw-bg-opacity))}.bg-\\[\\#05B1C1\\].svelte-168mg1v{--tw-bg-opacity:1;background-color:rgba(5, 177, 193, var(--tw-bg-opacity))}.grid.svelte-168mg1v{display:-ms-grid;display:grid}.hidden.svelte-168mg1v{display:none}.font-bold.svelte-168mg1v{font-weight:700}.h-44.svelte-168mg1v{height:11rem}.h-\\[30rem\\].svelte-168mg1v{height:30rem}.h-\\[86\\.7\\%\\].svelte-168mg1v{height:86.7%}.text-4xl.svelte-168mg1v{font-size:2.25rem;line-height:2.5rem}.-ml-5\\.5.svelte-168mg1v{margin-left:-1.375rem}.object-cover.svelte-168mg1v{-o-object-fit:cover;object-fit:cover}.px-14.svelte-168mg1v{padding-left:3.5rem;padding-right:3.5rem}.text-center.svelte-168mg1v{text-align:center}.text-\\[\\#0563C1\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(5, 99, 193, var(--tw-text-opacity))}.text-\\[\\#05B1C1\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(5, 177, 193, var(--tw-text-opacity))}.text-\\[\\#333\\].svelte-168mg1v{--tw-text-opacity:1;color:rgba(51, 51, 51, var(--tw-text-opacity))}.uppercase.svelte-168mg1v{text-transform:uppercase}.w-\\[100\\%\\].svelte-168mg1v{width:100%}.grid-cols-2.svelte-168mg1v{grid-template-columns:repeat(2, minmax(0, 1fr))}.col-start-1.svelte-168mg1v{grid-column-start:1}.col-start-2.svelte-168mg1v{grid-column-start:2}.col-start-3.svelte-168mg1v{grid-column-start:3}.col-end-3.svelte-168mg1v{grid-column-end:3}.col-end-2.svelte-168mg1v{grid-column-end:2}.col-end-4.svelte-168mg1v{grid-column-end:4}.grid-rows-2.svelte-168mg1v{grid-template-rows:repeat(2, minmax(0, 1fr))}.row-start-2.svelte-168mg1v{grid-row-start:2}.row-start-1.svelte-168mg1v{grid-row-start:1}.row-end-3.svelte-168mg1v{grid-row-end:3}@media(min-width: 640px){.sm\\:block.svelte-168mg1v{display:block}.sm\\:grid-cols-3.svelte-168mg1v{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media(min-width: 768px){.md\\:h-2xl.svelte-168mg1v{height:42rem}.md\\:h-\\[81\\%\\].svelte-168mg1v{height:81%}.md\\:h-\\[90\\.5\\%\\].svelte-168mg1v{height:90.5%}.md\\:text-6xl.svelte-168mg1v{font-size:3.75rem;line-height:1}}@media(min-width: 1024px){.lg\\:text-7xl.svelte-168mg1v{font-size:4.5rem;line-height:1}}",
-  map: null
-};
 var img = "hero-img.jpg";
 var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$1);
-  return `<section class="${"font-main-font text-center svelte-168mg1v"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem] svelte-168mg1v"}"><h1 class="${"center-grid col-start-1 text-4xl px-14 bg-[#FFD8A7] md:text-6xl lg:text-7xl text-[#0563C1] col-end-3 grid-item svelte-168mg1v"}">Your Friendly neighborhood Bugle</h1>
-        <p href="${""}" class="${"center-grid -ml-5.5 text-[#05B1C1] text-4xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 grid-item uppercase svelte-168mg1v"}"><a href="${"#Blog"}" class="${"btn"}">blog</a></p>
-        <p class="${"center-grid text-[#333] text-4xl bg-[#05B1C1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 grid-item uppercase svelte-168mg1v"}"><a href="${"#Go"}" class="${"btn"}">go</a></p>
-        <img${add_attribute("src", img, 0)} class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3 svelte-168mg1v"}" alt="${""}"></div>
-</section>`;
+  return `<section class="${"font-main-font text-center"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem]"}"><h1 class="${"center-grid col-start-1 text-4xl px-14 bg-[#FFD8A7] md:text-6xl lg:text-7xl text-[#0563C1] col-end-3 grid-item"}">Your Friendly neighborhood Bugle</h1>
+        <a href="${"#Blog"}" class="${"center-grid btn btn-outline pl-0 pr-0 rounded-none border-none text-[#05B1C1] text-4xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 uppercase"}">blog</a>
+        <a href="${"#Go"}" class="${"center-grid btn btn-outline pl-0 pr-0 rounded-none border-none text-[#333] text-4xl bg-[#05B1C1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 uppercase"}">go</a>
+        <img${add_attribute("src", img, 0)} class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3"}" alt="${""}"></div></section>`;
 });
-var css = {
-  code: ".drop-down-closed{opacity:0;visibility:hidden}.drop-down-open{opacity:1;visibility:visible}.font-main-font{font-family:'Montserrat'}.center-grid{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.drop-down{-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);-o-transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);-webkit-transition-duration:150ms;-o-transition-duration:150ms;transition-duration:150ms}.bg-\\[\\#0563C1\\]{--tw-bg-opacity:1;background-color:rgba(5, 99, 193, var(--tw-bg-opacity))}.text-\\[1\\.3rem\\]{font-size:1.3rem;line-height:1}.-mt-16{margin-top:-4rem}.-ml-1{margin-left:-0.25rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.sticky{position:sticky;position:-webkit-sticky}.top-0{top:0px}.text-\\[\\#fff0dd\\]{--tw-text-opacity:1;color:rgba(255, 240, 221, var(--tw-text-opacity))}.z-50{z-index:50}@media(min-width: 640px){.sm\\:list-disc{list-style-type:disc}.sm\\:mt-5{margin-top:1.25rem}.sm\\:py-32{padding-top:8rem;padding-bottom:8rem}.sm\\:px-16{padding-left:4rem;padding-right:4rem}}@media(max-width: 639.9px){.\\<sm\\:flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.\\<sm\\:flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.\\<sm\\:items-center{-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.\\<sm\\:justify-center{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}}",
-  map: null
-};
 var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css);
   return `<div class="${"sticky top-0 z-50"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}</div>
 ${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
 <section class="${"-mt-16"}"><div class="${"font-main-font bg-[#0563C1] text-[#fff0dd] py-14 -ml-1 sm:py-32 <sm:flex <sm:flex-col <sm:justify-center <sm:items-center sm:px-16 font-main-font text-[1.3rem]"}"><ul class="${"sm:list-disc sm:mt-5"}"><li class="${""}">Fact 1</li>
             <li class="${""}">Fact 2</li>
-            <li class="${""}">Fact 3</li></ul></div></section>
-<section><button class="${"btn btn-outline"}">neutral</button>
-</section>`;
+            <li class="${""}">Fact 3</li></ul></div></section>`;
 });
 var index = /* @__PURE__ */ Object.freeze({
   __proto__: null,

@@ -8,7 +8,7 @@
         font-family: 'Montserrat';
     }
     .center-grid {
-        @apply flex items-center justify-center;
+        @apply flex flex-row items-center justify-center;
     }
     .drop-down {
         @apply transition-all;
