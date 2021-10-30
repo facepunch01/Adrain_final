@@ -23,7 +23,7 @@
     export let posts;
     console.log(posts);
 </script>
-<div class="grid grid-flow-col bg-gray-900">
+<div class="grid grid-flow-col bg-[#222]">
     <h1 class="flex justify-center col-start-1 col-end-3 text-6xl text-[#f2f2f2] py-16 font-bold">POSTS</h1>
 </div>
 <div class="mt-3">

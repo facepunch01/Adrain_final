@@ -19,7 +19,7 @@
 
 <main>
     <nav class="relative font-main-font">
-        <div class="flex flex-row bg-[#05B1C1] text-[#333] fill-[#0BEAFF] px-3 py-2">
+        <div class="flex flex-row bg-[#222] text-[#f2f2f2] fill-[#0BEAFF] px-5 py-2">
             <h1 class="mr-auto self-center -ml-0.5 text-2xl md:text-xl"><a href="/">The <span class="text-[#0BEAFF] font-bold">Bugle</span></a></h1>
             <div class="self-center">
                 <svg class="md:hidden" on:click={() => openClose()} viewBox="0 0 100 80" width="25" height="25">
@@ -29,7 +29,7 @@
                 </svg>
             </div>
             <div class="<md:hidden flex flex-row items-center text-lg">
-                <ul class="flex flex-row items-center text-[#333] gap-3">
+                <ul class="flex flex-row items-center text-[#f2f2f2] gap-3">
                     <li class=""><a href="/{items[0]}">{items[0]}</a></li>
                     <li class="bg-[#FF6E6E] place-self-center text-lg border btn btn-primary btn-xs hover:bg-[#8f3b3b] hover:border-[#8f3b3b] border-l-3 border-[#FF6E6E] rounded-full border-r-3 h-[1.9rem]"><a href="/#Go" on:click={() => goToEnable()} class="">{items[1]}</a></li>
                 </ul>

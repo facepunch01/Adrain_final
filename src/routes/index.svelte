@@ -1,6 +1,5 @@
 <script>
     import Hero from "$lib/mainpage/Hero.svelte";
-    import * as animateScroll from "svelte-scrollto";
 </script>
 <Hero></Hero>
 <section class="-mt-16">
@@ -11,8 +10,8 @@
         </ul>
     </div>
 </section>
-<section class="bg-black md:px-30 md:py-11 py-7">
-    <div class="text-center bg-white mx-6 card card-body md:card md:card-body md:bg-white md:flex-row md:mx-auto md:mt-16 md:mb-16 md:gap-44">
+<section class="bg-[#222] md:px-30 md:py-11 py-7">
+    <div class="text-center bg-[#f1f1f1] mx-6 card card-body md:card md:card-body md:bg-white md:flex-row md:mx-auto md:mt-16 md:mb-16 md:gap-44">
         <h1 class="md:text-7xl md:self-center py-5 <md:-mt-7 text-4xl md:ml-30">Go</h1>
         <iframe class="w-[85%] mx-auto" title="map" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMVNt_7SnBIgR8SICH_nbsik&key=AIzaSyAiniDqxeptzWZi_UCV6NjftyS5nIrxbEA"></iframe> 
     </div>
