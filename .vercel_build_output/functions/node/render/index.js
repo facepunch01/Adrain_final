@@ -8897,7 +8897,7 @@ function add_attribute(name, value, boolean) {
 }
 function afterUpdate() {
 }
-var css$1 = {
+var css$2 = {
   code: "#svelte-announcer.svelte-u7bl1d{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
   map: null
 };
@@ -8922,7 +8922,7 @@ var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.props_1(props_1);
   if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
     $$bindings.props_2(props_2);
-  $$result.css.add(css$1);
+  $$result.css.add(css$2);
   {
     stores.page.set(page);
   }
@@ -8960,9 +8960,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-b9d04288.js",
+      file: assets + "/_app/start-2e750189.js",
       css: [assets + "/_app/assets/start-808c0b29.css"],
-      js: [assets + "/_app/start-b9d04288.js", assets + "/_app/chunks/vendor-1f3ec47e.js"]
+      js: [assets + "/_app/start-2e750189.js", assets + "/_app/chunks/vendor-1f3ec47e.js"]
     },
     fetched: void 0,
     floc: false,
@@ -9050,7 +9050,7 @@ var module_lookup = {
     return _slug_;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-aa806f44.js", "css": ["assets/pages/__layout.svelte-9d6ed0be.css"], "js": ["pages/__layout.svelte-aa806f44.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-648be679.js", "css": [], "js": ["error.svelte-648be679.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-12c99d81.js", "css": [], "js": ["pages/index.svelte-12c99d81.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/Blog/index.svelte": { "entry": "pages/Blog/index.svelte-2772988d.js", "css": [], "js": ["pages/Blog/index.svelte-2772988d.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/Blog/[slug].svelte": { "entry": "pages/Blog/[slug].svelte-6947a8df.js", "css": ["assets/pages/Blog/[slug].svelte-495ab79a.css"], "js": ["pages/Blog/[slug].svelte-6947a8df.js", "chunks/vendor-1f3ec47e.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-e4cff935.js", "css": ["assets/pages/__layout.svelte-2cd72533.css"], "js": ["pages/__layout.svelte-e4cff935.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-648be679.js", "css": [], "js": ["error.svelte-648be679.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-76af807a.js", "css": ["assets/pages/index.svelte-8cab26c9.css"], "js": ["pages/index.svelte-76af807a.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/Blog/index.svelte": { "entry": "pages/Blog/index.svelte-00f80faf.js", "css": [], "js": ["pages/Blog/index.svelte-00f80faf.js", "chunks/vendor-1f3ec47e.js"], "styles": [] }, "src/routes/Blog/[slug].svelte": { "entry": "pages/Blog/[slug].svelte-6947a8df.js", "css": ["assets/pages/Blog/[slug].svelte-495ab79a.css"], "js": ["pages/Blog/[slug].svelte-6947a8df.js", "chunks/vendor-1f3ec47e.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -9078,15 +9078,15 @@ var Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const items = ["Blog", "Go"];
   if ($$props.goTo === void 0 && $$bindings.goTo && goTo !== void 0)
     $$bindings.goTo(goTo);
-  return `<main><nav class="${"relative font-main-font"}"><div class="${"flex flex-row bg-[#05B1C1] text-[#333] fill-[#0BEAFF] px-3 py-2"}"><h1 class="${"mr-auto self-center -ml-0.5 text-2xl md:text-xl"}"><a href="${"/"}">The <span class="${"text-[#0BEAFF] font-bold"}">Bugle</span></a></h1>
+  return `<main><nav class="${"relative font-main-font"}"><div class="${"flex flex-row bg-[#222] text-[#f2f2f2] fill-[#0BEAFF] px-5 py-2"}"><h1 class="${"mr-auto self-center -ml-0.5 text-2xl md:text-xl"}"><a href="${"/"}">The <span class="${"text-[#0BEAFF] font-bold"}">Bugle</span></a></h1>
             <div class="${"self-center"}"><svg class="${"md:hidden"}" viewBox="${"0 0 100 80"}" width="${"25"}" height="${"25"}"><rect width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"30"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect><rect y="${"60"}" width="${"100"}" height="${"20"}" rx="${"8"}"></rect></svg></div>
-            <div class="${"<md:hidden flex flex-row items-center text-lg"}"><ul class="${"flex flex-row items-center text-[#333] gap-3"}"><li class="${""}"><a href="${"/" + escape(items[0])}">${escape(items[0])}</a></li>
-                    <li class="${"bg-[#FF6E6E] place-self-center text-lg border btn btn-primary btn-xs hover:bg-[#8f3b3b] hover:border-[#8f3b3b] border-l-3 border-[#FF6E6E] rounded-full border-r-3 h-[1.9rem]"}"><a href="${"#Go"}" class="${""}">${escape(items[1])}</a></li></ul></div></div>
+            <div class="${"<md:hidden flex flex-row items-center text-lg"}"><ul class="${"flex flex-row items-center text-[#f2f2f2] gap-3"}"><li class="${""}"><a href="${"/" + escape(items[0])}">${escape(items[0])}</a></li>
+                    <li class="${"bg-[#FF6E6E] place-self-center text-lg border btn btn-primary btn-xs hover:bg-[#8f3b3b] hover:border-[#8f3b3b] border-l-3 border-[#FF6E6E] rounded-full border-r-3 h-[1.9rem]"}"><a href="${"/#Go"}" class="${""}">${escape(items[1])}</a></li></ul></div></div>
         <div class="${[
     "float-right drop-shadow-2xl text-center drop-down h-full absolute z-[100] right-0 opacity-100",
     "drop-down-closed "
   ].join(" ").trim()}"><ul class="${"mr-1 mt-1 bg-[#FF6E6E] text-[#F2F2F2] border-8 rounded-md border-[#FF6E6E] text-4xl font-main-font font-bold"}"><li class="${"mb-5 mr-0.5"}"><a href="${"/" + escape(items[0])}">${escape(items[0])}</a></li>
-                <li class="${"mb-0.5"}"><a href="${"#Go"}">${escape(items[1])}</a></li></ul></div></nav></main>`;
+                <li class="${"mb-0.5"}"><a href="${"/#Go"}">${escape(items[1])}</a></li></ul></div></nav></main>`;
 });
 var _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div class="${"sticky top-0 z-50"}">${validate_component(Header, "Header").$$render($$result, {}, {}, {})}</div>
@@ -9123,19 +9123,24 @@ var error = /* @__PURE__ */ Object.freeze({
   "default": Error$1,
   load: load$2
 });
+var css$1 = {
+  code: "div.svelte-16bn0dn img{filter:grayscale(1)}",
+  map: null
+};
 var img = "hero-img.jpg";
 var Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<section class="${"font-main-font text-center"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem]"}"><h1 class="${"center-grid col-start-1 text-5xl px-14 bg-[#FFD8A7] md:text-6xl lg:text-7xl text-[#0563C1] col-end-3 grid-item"}">Your Friendly neighborhood Bugle</h1>
-        <p class="${"center-grid btn btn-outline pl-0 pr-0 ml-0 mr-0 rounded-none border-none text-[#05B1C1] text-5xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 w-[100%] uppercase"}"><a href="${"#Blog"}">blog</a></p>
-        <p class="${"center-grid btn btn-outline pl-0 pr-0 ml-0 mr-0 rounded-none border-none text-[#333] text-5xl bg-[#05B1C1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 w-[100%] uppercase"}"><a href="${"#Go"}" class="${""}">go</a></p>
-        <img${add_attribute("src", img, 0)} class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3"}" alt="${""}"></div></section>`;
+  $$result.css.add(css$1);
+  return `<section class="${"font-main-font text-center"}"><div class="${"grid grid-cols-2 md:h-2xl sm:grid-cols-3 grid-rows-2 font-bold h-[30rem] svelte-16bn0dn"}"><h1 class="${"center-grid col-start-1 text-5xl px-14 bg-black md:text-6xl lg:text-7xl text-white col-end-3 grid-item"}">Your Friendly neighborhood Bugle</h1>
+        <p class="${"center-grid btn btn-outline pl-0 pr-0 ml-0 mr-0 rounded-none border-none text-[#f2f2f2] text-5xl bg-[#333] md:h-[81%] lg:text-7xl col-start-1 h-44 col-end-2 row-start-2 row-end-3 w-[100%] uppercase"}"><a href="${"/Blog"}">blog</a></p>
+        <p class="${"center-grid btn btn-outline pl-0 pr-0 ml-0 mr-0 rounded-none border-none text-[#333] text-5xl bg-[#f1f1f1] md:h-[81%] lg:text-7xl col-start-2 h-44 col-end-3 row-start-2 row-end-3 w-[100%] uppercase"}"><a href="${"#Go"}" class="${""}">go</a></p>
+        <img${add_attribute("src", img, 0)} class="${"hidden sm:block h-[86.7%] md:h-[90.5%] w-[100%] object-cover col-start-3 col-end-4 row-start-1 row-end-3"}" alt="${""}"></div>
+</section>`;
 });
 var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})}
-<section class="${"-mt-16"}"><div class="${"font-main-font bg-[#0563C1] text-[#fff0dd] py-14 px-32 sm:py-32 <sm:flex <sm:flex-col <sm:justify-center <sm:items-center sm:px-16 font-main-font text-[1.3rem]"}"><ul class="${"sm:list-disc sm:mt-5"}"><li class="${"pb-6"}">Fact 1</li>
-            <li class="${"pb-6"}">Fact 2</li>
-            <li class="${""}">Fact 3</li></ul></div></section>
-<section class="${"bg-black md:px-30 md:py-11 py-7"}"><div class="${"text-center bg-white mx-6 card card-body md:card md:card-body md:bg-white md:flex-row md:mx-auto md:mt-16 md:mb-16 md:gap-44"}"><h1 class="${"md:text-7xl md:self-center py-5 <md:-mt-7 text-4xl md:ml-30"}">Go</h1>
+<section class="${"-mt-16"}"><div class="${"font-main-font bg-[#0563C1] text-[#fff0dd] py-14 px-32 sm:py-32 <sm:flex <sm:flex-col sm:px-16 font-main-font text-[1.3rem]"}"><ul class="${"list-disc sm:mt-5"}"><li class="${"pb-6"}">Only place in Sheboygan to get new/current comics.</li>
+            <li class="${""}">Independently owned and operated.</li></ul></div></section>
+<section class="${"bg-[#222] md:px-30 md:py-11 py-7"}"><div class="${"text-center bg-[#f1f1f1] mx-6 card card-body md:card md:card-body md:bg-white md:flex-row md:mx-auto md:mt-16 md:mb-16 md:gap-44"}"><h1 class="${"md:text-7xl md:self-center py-5 <md:-mt-7 text-4xl md:ml-30"}">Go</h1>
         <iframe class="${"w-[85%] mx-auto"}" title="${"map"}" height="${"450"}" style="${"border:0"}" loading="${"lazy"}" allowfullscreen src="${"https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMVNt_7SnBIgR8SICH_nbsik&key=AIzaSyAiniDqxeptzWZi_UCV6NjftyS5nIrxbEA"}"></iframe></div></section>
 <p id="${"Go"}"></p>`;
 });
@@ -9169,7 +9174,7 @@ var Blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   console.log(posts);
   if ($$props.posts === void 0 && $$bindings.posts && posts !== void 0)
     $$bindings.posts(posts);
-  return `<div class="${"grid grid-flow-col bg-gray-900"}"><h1 class="${"flex justify-center col-start-1 col-end-3 text-6xl text-[#f2f2f2] py-16 font-bold"}">POSTS</h1></div>
+  return `<div class="${"grid grid-flow-col bg-[#222]"}"><h1 class="${"flex justify-center col-start-1 col-end-3 text-6xl text-[#f2f2f2] py-16 font-bold"}">POSTS</h1></div>
 <div class="${"mt-3"}"><ul class="${"grid grid-cols-2 gap-4 mx-4 drop-shadow-md"}">${each(posts, (post) => `<div class="${"shadow-lg"}">${validate_component(Post, "Post").$$render($$result, { post }, {}, {})}
         </div>`)}</ul></div>`;
 });
